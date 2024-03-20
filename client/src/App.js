@@ -7,7 +7,6 @@ import Form from './components/Form/Form';
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
 import munchkin from './images/munchkin.png';
-import axios from 'axios';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -15,19 +14,14 @@ const App = () => {
   const classes = useStyles();
 
   useEffect(() => {
+    console.log('useEffect in App is called')
     dispatch(getPosts());
-  }, [currentId, dispatch]);
-  const url = 'http://localhost:5000/posts';
+  }, [ dispatch]);
 
-  useEffect(() => {
-    axios.get(url).then((res) => {
-        console.warn('test', res)
-    })
-  }, []);
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
+        <Typography className={classes.heading} variant="h2" align="center"> Social Kittea </Typography>
         <img className={classes.image} src={munchkin} alt="icon" height="60" />
       </AppBar>
       <Grow in>

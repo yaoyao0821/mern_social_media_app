@@ -22,14 +22,10 @@ app.use('/posts', postRoutes)
 
 //use mongo cloud atlas
 const CONNECTION_URL =process.env.CONNECTION_URL;
-const PORT = process.env.PORT ||  5000
+const PORT = process.env.PORT || 5000
 //connect return a promise
 mongoose.connect(
     CONNECTION_URL,
-    {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
-    }
 ).then(() => {
     app.listen(PORT, () => {
         console.log(`Server runing on port: ${PORT}`)
@@ -37,4 +33,3 @@ mongoose.connect(
 }).catch((err) => {
     console.log(err.message)
 });
-// mongoose.set('useFindAndModify', false);
