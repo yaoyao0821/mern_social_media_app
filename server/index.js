@@ -31,5 +31,5 @@ mongoose.connect(
         console.log(`Server runing on port: ${PORT}`)
     })
 }).catch((err) => {
-    console.log(err.message)
+    console.log(err)
 });

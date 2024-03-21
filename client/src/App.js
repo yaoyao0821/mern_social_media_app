@@ -14,19 +14,18 @@ const App = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    console.log('useEffect in App is called')
     dispatch(getPosts());
-  }, [ dispatch]);
+  }, [dispatch]);
 
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center"> Social Kittea </Typography>
+        <Typography className={classes.heading} variant="h2" align="center"> Kittea Cafe</Typography>
         <img className={classes.image} src={munchkin} alt="icon" height="60" />
       </AppBar>
       <Grow in>
         <Container>
-          <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
+          <Grid className={classes.mainContainer} container justifyContent="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}>
               <Posts setCurrentId={setCurrentId} />
             </Grid>
