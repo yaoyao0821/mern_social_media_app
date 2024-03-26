@@ -1,1 +1,1 @@
-# mern_social_media_app
+# Kittea Cafe Social Posts using MERN

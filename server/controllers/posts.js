@@ -1,9 +1,7 @@
-import express from 'express';
+// import express from 'express';
 import mongoose from 'mongoose';
 
 import PostMessage from '../models/postMessage.js';
-
-const router = express.Router();
 
 //controllers are for logic in routes
 export const getPosts = async (req, res) => {
