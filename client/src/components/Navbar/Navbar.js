@@ -43,12 +43,6 @@ const Navbar = () => {
                 <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
             )}
             </Toolbar>
-
-            <Routes>
-                <Route path='/' exact element={<Home />}></Route>
-                <Route path='/auth' exact element={<Auth />}></Route>
-            </Routes>
-
         </AppBar>
     );
 };
